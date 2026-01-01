@@ -1,68 +1,79 @@
 <html>
 <head>
-  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .banner { background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%); color: white; padding: 40px; border-radius: 8px 8px 0 0; }
+    .banner h1 { margin: 0; font-size: 2.5em; font-weight: bold; }
+    .banner p { margin: 15px 0 0 0; font-size: 1.1em; }
+    .team-container { display: flex; gap: 30px; margin: 40px auto; justify-content: center; flex-wrap: wrap; }
+    .team-card { width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; transition: transform 0.3s; }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card img { width: 100%; height: 250px; object-fit: cover; }
+    .card-body { padding: 20px; }
+    .title { font-size: 1.3em; font-weight: bold; margin: 0; color: #008B8B; }
+    .position { color: #666; font-size: 0.95em; margin: 5px 0; }
+    .description { color: #555; font-size: 0.9em; margin: 10px 0; line-height: 1.5; }
+    .email { color: #008B8B; text-decoration: none; font-size: 0.9em; }
+    .email:hover { text-decoration: underline; }
+    .main-card { width: 90%; max-width: 1000px; margin: 40px auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+  </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008B8B; height: auto; padding: 15px 0;">
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <h2 style="padding-right: 5%; color: white; margin: 0;">Best Cars Dealership</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" style="font-size: larger;" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-white" style="font-size: larger;" href="/about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" style="font-size: larger;" href="/contact">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+
+  <div class="main-card">
+    <div class="banner">
+      <h1>About Us</h1>
+      <p>Welcome to Best Cars Dealership, your trusted partner for premium vehicles since 2010. We specialize in offering the finest selection of domestic and imported automobiles at competitive prices across North America.</p>
+    </div>
+
+    <div class="team-container">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="James Mitchell">
         <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+          <p class="title">James Mitchell</p>
+          <p class="position">Chief Executive Officer</p>
+          <p class="description">With 20+ years in the automotive industry, James leads our vision of customer excellence and integrity in every transaction.</p>
+          <a class="email" href="mailto:james.mitchell@bestcars.com">james.mitchell@bestcars.com</a>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" alt="Sarah Anderson">
         <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+          <p class="title">Sarah Anderson</p>
+          <p class="position">Sales Manager</p>
+          <p class="description">Sarah's expertise in matching customers with their ideal vehicles has made her one of our most valued team members for the past 8 years.</p>
+          <a class="email" href="mailto:sarah.anderson@bestcars.com">sarah.anderson@bestcars.com</a>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" alt="Michael Chen">
         <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+          <p class="title">Michael Chen</p>
+          <p class="position">Service Director</p>
+          <p class="description">Michael ensures every vehicle meets our strict quality standards and provides exceptional after-sales support to all our clients.</p>
+          <a class="email" href="mailto:michael.chen@bestcars.com">michael.chen@bestcars.com</a>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    
-</div>
-
+  </div>
+</body>
 </html>

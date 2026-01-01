@@ -1,44 +1,115 @@
-(venv) 96654:server$ python3 manage.py makemigrations
+theia@theia-aamsdoumani:/home/project$ git clone https://github.com/pluhgang69420-lab/xrwvm-fullstack_developer_capstone.git
+Cloning into 'xrwvm-fullstack_developer_capstone'...
+remote: Enumerating objects: 1417, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 1417 (delta 1), reused 3 (delta 0), pack-reused 1412 (from 1)
+Receiving objects: 100% (1417/1417), 2.06 MiB | 39.02 MiB/s, done.
+Resolving deltas: 100% (759/759), done.
+theia@theia-aamsdoumani:/home/project$ cd xrwvm-fullstack_developer_capstone/server
+theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_capstone/server
+$ pip install virtualenv
+Defaulting to user installation because normal site-packages is not writeable
+Collecting virtualenv
+  Downloading virtualenv-20.35.4-py3-none-any.whl.metadata (4.6 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv)
+  Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv)
+  Downloading filelock-3.20.1-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in /usr/local/lib/python3.11/dist-packages (from virtualenv) (4.5.0)
+Downloading virtualenv-20.35.4-py3-none-any.whl (6.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 131.0 MB/s  0:00:00
+Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+Downloading filelock-3.20.1-py3-none-any.whl (16 kB)
+Installing collected packages: distlib, filelock, virtualenv
+Successfully installed distlib-0.4.0 filelock-3.20.1 virtualenv-20.35.4
+theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_capstone/server
+$ virtualenv djangoenv
+created virtual environment CPython3.11.14.final.0-64 in 1066ms
+  creator CPython3Posix(dest=/home/project/xrwvm-fullstack_developer_capstone/server/djangoenv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, via=copy, app_data_dir=/home/theia/.local/share/virtualenv)
+    added seed packages: pip==25.3, setuptools==80.9.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_capstone/server
+$ source djangoenv/bin/activate
+(djangoenv) theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_cap
+stone/server$ python3 -m pip install -U -r requirements.txt
+Collecting requests (from -r requirements.txt (line 1))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting Django (from -r requirements.txt (line 2))
+  Downloading django-5.2.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting Pillow (from -r requirements.txt (line 3))
+  Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting gunicorn (from -r requirements.txt (line 4))
+  Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting python-dotenv (from -r requirements.txt (line 5))
+  Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+Collecting charset_normalizer<4,>=2 (from requests->-r requirements.txt (line 1))
+  Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 1))
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 1))
+  Downloading urllib3-2.6.2-py3-none-any.whl.metadata (6.6 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 1))
+  Downloading certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+Collecting asgiref>=3.8.1 (from Django->-r requirements.txt (line 2))
+  Downloading asgiref-3.11.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from Django->-r requirements.txt (line 2))
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting packaging (from gunicorn->-r requirements.txt (line 4))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading urllib3-2.6.2-py3-none-any.whl (131 kB)
+Downloading django-5.2.9-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 144.0 MB/s  0:00:00
+Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 119.2 MB/s  0:00:00
+Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+Downloading asgiref-3.11.0-py3-none-any.whl (24 kB)
+Downloading certifi-2025.11.12-py3-none-any.whl (159 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, packaging, idna, charset_normalizer, certifi, asgiref, requests, gunicorn, Django
+Successfully installed Django-5.2.9 Pillow-12.0.0 asgiref-3.11.0 certifi-2025.11.12 charset_normalizer-3.4.4 gunicorn-23.0.0 idna-3.11 packaging-25.0 python-dotenv-1.2.1 requests-2.32.5 sqlparse-0.5.5 urllib3-2.6.2
+(djangoenv) theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_cap
+stone/server$ python3 manage.py makemigrations
 No changes detected
-(venv) 96654:server$ python3 manage.py migrate
+(djangoenv) theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_cap
+stone/server$ python3 manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
   Applying contenttypes.0001_initial... OK
   Applying auth.0001_initial... OK
   Applying admin.0001_initial... OK
-  Applying admin.0002_logentry_remove_auto_add... OK     
+  Applying admin.0002_logentry_remove_auto_add... OK
   Applying admin.0003_logentry_add_action_flag_choices... OK
-  Applying contenttypes.0002_remove_content_type_name... OK 
+  Applying contenttypes.0002_remove_content_type_name... OK
   Applying auth.0002_alter_permission_name_max_length... OK
-  Applying auth.0003_alter_user_email_max_length... OK     
-  Applying auth.0004_alter_user_username_opts... OK   
-  Applying auth.0005_alter_user_last_login_null... OK      
-  Applying auth.0006_require_contenttypes_0002... OK       
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
   Applying auth.0007_alter_validators_add_error_messages... OK
-  Applying auth.0008_alter_user_username_max_length... OK     
+  Applying auth.0008_alter_user_username_max_length... OK
   Applying auth.0009_alter_user_last_name_max_length... OK
-  Applying auth.0010_alter_group_name_max_length... OK    
-  Applying auth.0011_update_proxy_permissions... OK        
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
   Applying auth.0012_alter_user_first_name_max_length... OK
   Applying sessions.0001_initial... OK
-(venv) 96654:server$ python3 manage.py runserver
+(djangoenv) theia@theia-aamsdoumani:/home/project/xrwvm-fullstack_developer_cap
+stone/server$ python3 manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-December 31, 2025 - 18:42:49
+January 01, 2026 - 01:49:40
 Django version 5.2.9, using settings 'djangoproj.settings'
 Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
+Quit the server with CONTROL-C.
 
 WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
 For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
-[31/Dec/2025 18:42:57] "GET / HTTP/1.1" 200 2679
-[31/Dec/2025 18:42:58] "GET /static/car_dealership.jpg HTTP/1.1" 200 263696
-[31/Dec/2025 18:42:58] "GET /static/bootstrap.min.css HTTP/1.1" 200 155806
-[31/Dec/2025 18:42:58] "GET /static/style.css HTTP/1.1" 200 2044
-Not Found: /favicon.ico
-[31/Dec/2025 18:42:59] "GET /favicon.ico HTTP/1.1" 404 2678
-Not Found: /dealers
-[31/Dec/2025 18:43:01] "GET /dealers HTTP/1.1" 404 2666
