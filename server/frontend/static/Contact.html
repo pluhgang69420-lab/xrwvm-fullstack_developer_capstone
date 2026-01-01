@@ -1,0 +1,71 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .banner { background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%); color: white; padding: 40px; border-radius: 8px 8px 0 0; }
+    .banner h1 { margin: 0; font-size: 2.5em; font-weight: bold; }
+    .banner p { margin: 15px 0 0 0; font-size: 1.1em; }
+    .team-container { display: flex; gap: 30px; margin: 40px auto; justify-content: center; flex-wrap: wrap; }
+    .team-card { width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; transition: transform 0.3s; }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card img { width: 100%; height: 250px; object-fit: cover; }
+    .card-body { padding: 20px; }
+    .title { font-size: 1.3em; font-weight: bold; margin: 0; color: #008B8B; }
+    .position { color: #666; font-size: 0.95em; margin: 5px 0; }
+    .description { color: #555; font-size: 0.9em; margin: 10px 0; line-height: 1.5; }
+    .email { color: #008B8B; text-decoration: none; font-size: 0.9em; }
+    .email:hover { text-decoration: underline; }
+    .main-card { width: 90%; max-width: 1000px; margin: 40px auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008B8B; height: auto; padding: 15px 0;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%; color: white; margin: 0;">Best Cars Dealership</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" style="font-size: larger;" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-white" style="font-size: larger;" href="/about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" style="font-size: larger;" href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-card">
+    <div class="banner">
+      <h1>Contact Us</h1>
+      <p>Have questions or need assistance? Reach out to us through the contact information below.</p>
+    </div>
+
+    <div class="team-container">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop" alt="Sales Inquiries">
+        <div class="card-body">
+          <p class="title">Emily Johnson</p>
+          <p class="position">Sales Representative</p>
+          <p class="description">Emily is your go-to person for all sales-related questions, vehicle availability, and pricing information.</p>
+          <div class="email">
+            <a href="mailto:emily.johnson@bestcars.com">emily.johnson@bestcars.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop" alt="Technical Support">
+        <div class="card-body">
+          <p class="title">Sarah Lee</p>
+          <p class="position">Technical Support Specialist</p>
+          <p class="description">Sarah is available to assist you with any technical issues or questions about our vehicles' features and functionalities.</p>
+          <div class="email">
+            <a href="mailto:sarah.lee@bestcars.com">sarah.lee@bestcars.com</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
